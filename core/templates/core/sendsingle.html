@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+<form action="{% url 'one' %}" method="post">
+	{% csrf_token %}
+  <div class="mb-3">
+  	 <div id="emailHelp" class="form-text">Enter the subject of the email below</div>
+  </div>
+    <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+    <input type="text" name="subject" placeholder="Subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <br>
+    <div class="mb-3">
+  	 <div id="emailHelp" class="form-text">Enter the body of the email below</div>
+  </div>
+<div class="form-floating">
+  <textarea class="form-control"  name="mail_body" rows="30" cols="50" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+  <label for="floatingTextarea2">Write your mail here.....</label>
+</div>
+<br>
+  <button type="submit" class="btn btn-primary">Send Mail</button>
+</form>
+{% endblock %}

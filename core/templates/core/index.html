@@ -1,0 +1,22 @@
+{% extends 'core/base.html' %}
+
+
+{% block content %}
+<div class="card" style="width: 18rem;">
+  <!-- <img src="..." class="card-img-top" alt="..."> -->
+  <div class="card-body">
+    <h5 class="card-title">Email Fly</h5>
+    <p class="card-text">Email fly is your ally, it helps you send your mails on the go.</p>
+  </div>
+ <!--  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An i</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul> -->
+  <div class="card-body">
+    <a href="{% url 'one' %}" class="card-link">Send A mail</a>
+    <!-- <a href="#" class="card-link">Send Bulk mail</a> -->
+  </div>
+</div>
+
+{% endblock %}
